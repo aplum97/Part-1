@@ -30,9 +30,12 @@ Load balancing ensures that the application will be highly secure, in addition t
 - What is the advantage of a jump box?
 - **Optimizing** resource usage, data delivery, and response time, load balancing allows high-traffic websites, applications, and databases to be managed. **Flexibility:** Furthermore, load balancing provides the flexibility of adding and removing servers according to demand. In addition, the traffic is routed to another server during maintenance, so server maintenance can be performed without affecting users. **Scalability:** Traffic increases can negatively affect the performance of an application or website as it is used more often. Load balancing gives you the flexibility to add physical or virtual servers without disrupting current services. Load balancers seamlessly involve new servers in the process as soon as they go online. An overloaded server can be upgraded without much downtime, versus moving a website to a different one. **Redundancy:** Load balancing provides built-in redundancy through the distribution of traffic among servers. Users will experience minimal impact from rerouting the load if a server fails.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
+- _What does Filebeat watch for?_
+-  **Filebeat** watches and monitors the log files or locations that users specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing. Filebeat is a lightweight shipper for forwarding and centralizing log data.
+
+- _What does Metricbeat record?_
+- **Metricbeat** is a lightweight shipper that records and periodically collects metrics from the operating system and from services running on the server and takes the metrics and statistics that it collects and ships them to the output that users specify, such as Elasticsearch or Logstash. The configuration details of each machine may be found below.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -64,8 +67,11 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible does not track dependencies and simply executes sequential tasks and stops when tasks finish, fail, or any error comes. These traits are not ideal for users who want the automation tool to maintain a detailed catalog for ordering.
+
+- _What is the main advantage of automating configuration with Ansible?_
+- **Saving Time**. Before automation, system administrators had to spend hours configuring machines manually, after Ansible, the time required to configure the whole process is less than 3 minutes!!! The second benefit is reducing bugs and errors.
+
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
