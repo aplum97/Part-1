@@ -23,7 +23,12 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly secure, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+
+- What aspect of security do load balancers protect? 
+- Load Balancing plays an important security role as computing moves evermore to the cloud. The off-loading function of a load balancer defends an organization against distributed **denial-of-service (DDoS) attacks**. It does this by shifting attack traffic from the corporate server to a public cloud provider.
+
+- What is the advantage of a jump box?
+- **Optimizing** resource usage, data delivery, and response time, load balancing allows high-traffic websites, applications, and databases to be managed. **Flexibility:** Furthermore, load balancing provides the flexibility of adding and removing servers according to demand. In addition, the traffic is routed to another server during maintenance, so server maintenance can be performed without affecting users. **Scalability:** Traffic increases can negatively affect the performance of an application or website as it is used more often. Load balancing gives you the flexibility to add physical or virtual servers without disrupting current services. Load balancers seamlessly involve new servers in the process as soon as they go online. An overloaded server can be upgraded without much downtime, versus moving a website to a different one. **Redundancy:** Load balancing provides built-in redundancy through the distribution of traffic among servers. Users will experience minimal impact from rerouting the load if a server fails.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - _TODO: What does Filebeat watch for?_
