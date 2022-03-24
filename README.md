@@ -43,9 +43,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+|New-Region| Server   | 10.2.0.4   | Linux            |
+| Web-1    | Server   | 10.0.0.5   | Linux            |
+| Web-2    | Server   | 10.0.0.6   | Linux            |
 
 ### Access Policies
 
@@ -55,15 +55,18 @@ Only the host machine can accept connections from the Internet. Access to this m
 -192.168.13.1
 
 Machines within the network can only be accessed by .
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- _Which machine did you allow to access your ELK VM? 
+-__**Jump-Box Provisioner was thte only machines allowed access. Access is gained from the local host 192.168.13.1**__
 
+- _What was its IP address?_
+**10.0.0.4**
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | 10.0.0.1 10.0.0.2    |
+| Web-1    | No                  | 10.0.0.5             |
+| Web-2    | no                  | 10.0.0.6             |
 
 ### Elk Configuration
 
@@ -86,7 +89,9 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- _List the IP addresses of the machines you are monitoring_
+- **Web-1: 10.0.0.5**
+- **Web-2: 10.0.0.6**
 
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_
